@@ -34,6 +34,7 @@ FenSet::~FenSet()
     qDebug()<<"fenset";
 }
 
+/* The aim of the next function is to create the set request and then, emit the order */
 void FenSet::createRequest(){
     const QByteArray firstPartRequest = "pktgen.set(";
     QByteArray tempOption;
