@@ -1,0 +1,297 @@
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1112</width>
+    <height>652</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Pktgen Client</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout"/>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1112</width>
+     <height>19</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFichier">
+    <property name="title">
+     <string>Fichier</string>
+    </property>
+    <addaction name="actionConnexion"/>
+    <addaction name="separator"/>
+    <addaction name="actionQuitter"/>
+   </widget>
+   <widget class="QMenu" name="menuEdition">
+    <property name="title">
+     <string>Edition</string>
+    </property>
+    <widget class="QMenu" name="menuRange_Command">
+     <property name="title">
+      <string>Range Command</string>
+     </property>
+     <addaction name="actionSrc_ip"/>
+     <addaction name="actionDst_ip"/>
+     <addaction name="actionSrc_mac"/>
+     <addaction name="actionDst_mac"/>
+     <addaction name="actionSrc_port"/>
+     <addaction name="actionDst_port"/>
+     <addaction name="actionVlan_id"/>
+    </widget>
+    <addaction name="menuRange_Command"/>
+    <addaction name="separator"/>
+    <addaction name="actionSet"/>
+    <addaction name="actionSet_mac"/>
+    <addaction name="actionSet_ipaddr"/>
+    <addaction name="actionSet_proto"/>
+    <addaction name="actionSet_type"/>
+   </widget>
+   <widget class="QMenu" name="menuAffichage">
+    <property name="title">
+     <string>Affichage</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuA_propos">
+    <property name="title">
+     <string>A propos</string>
+    </property>
+    <addaction name="actionA_propos_de_DPDK"/>
+    <addaction name="actionA_propos_de_Pktgen"/>
+    <addaction name="separator"/>
+    <addaction name="actionA_propos_de_QT"/>
+    <addaction name="separator"/>
+    <addaction name="actionA_propos_de_Pktgen_Client"/>
+   </widget>
+   <widget class="QMenu" name="menuAction">
+    <property name="title">
+     <string>Action</string>
+    </property>
+    <widget class="QMenu" name="menuAll_Ports">
+     <property name="title">
+      <string>All Ports</string>
+     </property>
+     <addaction name="actionStr"/>
+     <addaction name="actionStp"/>
+     <addaction name="actionClr"/>
+     <addaction name="actionRst"/>
+    </widget>
+    <addaction name="menuAll_Ports"/>
+    <addaction name="separator"/>
+    <addaction name="actionStart"/>
+    <addaction name="actionStop"/>
+    <addaction name="actionClear"/>
+    <addaction name="actionReset"/>
+   </widget>
+   <addaction name="menuFichier"/>
+   <addaction name="menuAction"/>
+   <addaction name="menuEdition"/>
+   <addaction name="menuAffichage"/>
+   <addaction name="menuA_propos"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionConnexion">
+   <property name="text">
+    <string>Connexion...</string>
+   </property>
+  </action>
+  <action name="actionQuitter">
+   <property name="text">
+    <string>Quitter</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="actionA_propos_de_DPDK">
+   <property name="text">
+    <string>A propos de DPDK</string>
+   </property>
+  </action>
+  <action name="actionA_propos_de_Pktgen">
+   <property name="text">
+    <string>A propos de Pktgen</string>
+   </property>
+  </action>
+  <action name="actionA_propos_de_QT">
+   <property name="text">
+    <string>A propos de QT</string>
+   </property>
+  </action>
+  <action name="actionSet">
+   <property name="text">
+    <string>Set</string>
+   </property>
+  </action>
+  <action name="actionPort">
+   <property name="text">
+    <string>Port</string>
+   </property>
+  </action>
+  <action name="actionPort_2">
+   <property name="text">
+    <string>Port</string>
+   </property>
+  </action>
+  <action name="actionPrompt">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Prompt</string>
+   </property>
+  </action>
+  <action name="actionSet_mac">
+   <property name="text">
+    <string>set_mac</string>
+   </property>
+  </action>
+  <action name="actionSet_ipaddr">
+   <property name="text">
+    <string>set_ipaddr</string>
+   </property>
+  </action>
+  <action name="actionSet_proto">
+   <property name="text">
+    <string>set_proto</string>
+   </property>
+  </action>
+  <action name="actionSet_type">
+   <property name="text">
+    <string>set_type</string>
+   </property>
+  </action>
+  <action name="actionDst_mac">
+   <property name="text">
+    <string>dst_mac</string>
+   </property>
+  </action>
+  <action name="actionSrc_mac">
+   <property name="text">
+    <string>src_mac</string>
+   </property>
+  </action>
+  <action name="actionSrc_ip">
+   <property name="text">
+    <string>src_ip</string>
+   </property>
+  </action>
+  <action name="actionDst_ip">
+   <property name="text">
+    <string>dst_ip</string>
+   </property>
+  </action>
+  <action name="actionSrc_port">
+   <property name="text">
+    <string>src_port</string>
+   </property>
+  </action>
+  <action name="actionDst_port">
+   <property name="text">
+    <string>dst_port</string>
+   </property>
+  </action>
+  <action name="actionVlan_id">
+   <property name="text">
+    <string>vlan_id</string>
+   </property>
+  </action>
+  <action name="actionMpls_entry">
+   <property name="text">
+    <string>mpls_entry</string>
+   </property>
+  </action>
+  <action name="actionQinqids">
+   <property name="text">
+    <string>qinqids</string>
+   </property>
+  </action>
+  <action name="actionGre_key">
+   <property name="text">
+    <string>gre_key</string>
+   </property>
+  </action>
+  <action name="actionStart">
+   <property name="text">
+    <string>Start...</string>
+   </property>
+  </action>
+  <action name="actionStop">
+   <property name="text">
+    <string>Stop...</string>
+   </property>
+  </action>
+  <action name="actionStr">
+   <property name="text">
+    <string>Str</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionStp">
+   <property name="text">
+    <string>Stp</string>
+   </property>
+  </action>
+  <action name="actionGtpu_teid">
+   <property name="text">
+    <string>Gtpu.teid</string>
+   </property>
+  </action>
+  <action name="actionA_propos_de_Pktgen_Client">
+   <property name="text">
+    <string>A propos de Pktgen Client</string>
+   </property>
+  </action>
+  <action name="actionClr">
+   <property name="text">
+    <string>Clr</string>
+   </property>
+  </action>
+  <action name="actionClear">
+   <property name="text">
+    <string>Clear...</string>
+   </property>
+  </action>
+  <action name="actionRst">
+   <property name="text">
+    <string>Rst</string>
+   </property>
+  </action>
+  <action name="actionReset">
+   <property name="text">
+    <string>Reset...</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>actionQuitter</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>199</x>
+     <y>149</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
